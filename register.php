@@ -85,10 +85,10 @@ $err[] = "ERROR - The username/email already exists. Please try again with diffe
 if(empty($err)) {
 
 $sql_insert = "INSERT into `users`
-  			(`first_name`, `last_name`, `user_name`, `user_email`,`pwd`,`city`,`stat`,`field`,`gpa`,`date`,`users_ip`,`activation_code`
+  			(`first_name`, `last_name`, `user_name`, `user_email`,`pwd`,`field`,`city`,`stat`,`gpa`,`date`,`users_ip`,`activation_code`
 			)
 		    VALUES
-		    ('$data[first_name]','$data[last_name]','$user_name','$usr_email','$sha1pass','$data[city]','$data[stat]','$data[field]','$data[gpa]',
+		    ('$data[first_name]','$data[last_name]','$user_name','$usr_email','$sha1pass','$data[field]','$data[city]','$data[stat]','$data[gpa]',
 			,now(),'$user_ip','$activ_code'
 			)
 			";
