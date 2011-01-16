@@ -83,7 +83,7 @@ register();
           </tr>
           <tr> 
             <td colspan="2">State<span class="required"><font color="#CC0000">*</font></span><br> 
-              <input name="state" type="text" id="state" size="5" class="required"></td>
+              <input name="stat" type="text" id="stat" size="5" class="required"></td>
           </tr>
           <tr> 
             <td colspan="2">&nbsp;</td>
