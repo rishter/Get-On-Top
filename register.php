@@ -83,17 +83,8 @@ $sql_insert = "INSERT into `users`
 			)
 			";
 			
-mysql_query($sql_insert,$link) or die("Insertion Failed:" . mysql_error());
-$user_id = mysql_insert_id($link);  
-$md5_id = md5($user_id);
-mysql_query("update users set md5_id='$md5_id' where id='$user_id'");
-//	echo "<h3>Thank You</h3> We received your submission.";
+mysql_query($sql_insert) or die("Insertion Failed:" . mysql_error());
 
-if($user_registration)  {
-$a_link = 
-"Your account is *PENDING APPROVAL* and will be soon activated the administrator.
-";
-}
   header("Location: thankyou.php");  
   exit();
 	 
