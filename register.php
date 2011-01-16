@@ -25,14 +25,14 @@ $err[] = "ERROR - Invalid first name. Please enter atleast 3 or more characters 
 
 if(empty($data['last_name']) || strlen($data['last_name']) < 4)
 {
-$err[] = "ERROR - Invalid first name. Please enter atleast 3 or more characters for your first name";
+$err[] = "ERROR - Invalid last name. Please enter atleast 3 or more characters for your last name";
 //header("Location: register.php?msg=$err");
 //exit();
 }
 
 // Validate User Name
 if (!isUserID($data['user_name'])) {
-$err[] = "ERROR - Invalid user name. It can contain alphabet, number and underscore.";
+$err[] = "ERROR - Invalid user name. It can contain letters, number and underscore.";
 //header("Location: register.php?msg=$err");
 //exit();
 }
@@ -55,16 +55,6 @@ $user_ip = $_SERVER['REMOTE_ADDR'];
 // stores sha1 of password
 $sha1pass = PwdHash($data['pwd']);
 
-// Automatically collects the hostname or domain  like example.com) 
-$host  = $_SERVER['HTTP_HOST'];
-$host_upper = strtoupper($host);
-$path   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
-
-// Generates activation code simple 4 digit number
-$activ_code = rand(1000,9999);
-
-$usr_email = $data['usr_email'];
-$user_name = $data['user_name'];
 
 /************ USER EMAIL CHECK ************************************
 This code does a second check on the server side if the email already exists. It 
@@ -100,39 +90,10 @@ mysql_query("update users set md5_id='$md5_id' where id='$user_id'");
 //	echo "<h3>Thank You</h3> We received your submission.";
 
 if($user_registration)  {
-$a_link = "
-*****ACTIVATION LINK*****\n
-http://$host$path/activate.php?user=$md5_id&activ_code=$activ_code
-"; 
-} else {
 $a_link = 
 "Your account is *PENDING APPROVAL* and will be soon activated the administrator.
 ";
 }
-
-$message = 
-"Hello \n
-Thank you for registering with us. Here are your login details...\n
-
-User ID: $user_name
-Email: $usr_email \n 
-Passwd: $data[pwd] \n
-
-$a_link
-
-Thank You
-
-Administrator
-$host_upper
-______________________________________________________
-THIS IS AN AUTOMATED RESPONSE. 
-***DO NOT RESPOND TO THIS EMAIL****
-";
-
-	mail($usr_email, "Login Details", $message,
-    "From: \"Member Registration\" <auto-reply@$host>\r\n" .
-     "X-Mailer: PHP/" . phpversion());
-
   header("Location: thankyou.php");  
   exit();
 	 
