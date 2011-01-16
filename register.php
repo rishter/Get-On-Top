@@ -16,9 +16,16 @@ foreach($_POST as $key => $value) {
 /************************ SERVER SIDE VALIDATION **************************************/
 /********** This validation is useful if javascript is disabled in the browswer ***/
 
-if(empty($data['full_name']) || strlen($data['full_name']) < 4)
+if(empty($data['first_name']) || strlen($data['first_name']) < 4)
 {
-$err[] = "ERROR - Invalid name. Please enter atleast 3 or more characters for your name";
+$err[] = "ERROR - Invalid first name. Please enter atleast 3 or more characters for your first name";
+//header("Location: register.php?msg=$err");
+//exit();
+}
+
+if(empty($data['last_name']) || strlen($data['last_name']) < 4)
+{
+$err[] = "ERROR - Invalid first name. Please enter atleast 3 or more characters for your first name";
 //header("Location: register.php?msg=$err");
 //exit();
 }
@@ -78,10 +85,10 @@ $err[] = "ERROR - The username/email already exists. Please try again with diffe
 if(empty($err)) {
 
 $sql_insert = "INSERT into `users`
-  			(`first_name`, `last_name`, `user_name`, `user_email`,`pwd`,`city`,`state`,`field`,`gpa`,`date`,`users_ip`,`activation_code`
+  			(`first_name`, `last_name`, `user_name`, `user_email`,`pwd`,`city`,`stat`,`field`,`gpa`,`date`,`users_ip`,`activation_code`
 			)
 		    VALUES
-		    ('$data[first_name]','$data[last_name]','$user_name','$usr_email','$sha1pass','$data[city]','$data[state]','$data[field]','$data[gpa]',
+		    ('$data[first_name]','$data[last_name]','$user_name','$usr_email','$sha1pass','$data[city]','$data[stat]','$data[field]','$data[gpa]',
 			,now(),'$user_ip','$activ_code'
 			)
 			";
