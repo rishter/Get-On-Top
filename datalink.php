@@ -26,7 +26,7 @@ Note: If you use cpanel, the name will be like account_database
 define ("DB_HOST", "sql.mit.edu"); // set database host
 define ("DB_USER", "rrt"); // set database user
 define ("DB_PASS", "det66mef"); // set database password
-define ("DB_NAME","rrt+getontopusers"); // set database name
+define ("DB_NAME","getontopusers"); // set database name
 
 $link = mysql_connect(DB_HOST, DB_USER, DB_PASS) or die("Couldn't make connection.");
 $db = mysql_select_db(DB_NAME, $link) or die("Couldn't select database");
