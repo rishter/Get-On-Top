@@ -8,8 +8,8 @@ page_protect();
 <head>
 <title>My Account</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-
 <link href="styles.css" rel="stylesheet" type="text/css">
+
 </head>
 
 <body>
@@ -33,17 +33,13 @@ if (isset($_SESSION['user_id'])) {?>
     <a href="logout.php">Logout </a>
 	
   <p>You can add more links here for users</p></div>
-<?php }
-if (checkAdmin()) {
-/*******************************END**************************/
-?>
       <p> <a href="admin.php">Admin CP </a></p>
 	  <?php } ?>
       <p>&nbsp;</p>
       <p>&nbsp;</p>
       <p>&nbsp;</p></td>
     <td width="732" valign="top"><p>&nbsp;</p>
-      <h3 class="titlehdr">Welcome <?php echo $_SESSION['first_name'];?> <?php echo $_SESSION['last_name'];?></h3>  
+      <h3 class="titlehdr">Welcome <?php include 'datalink.php'; echo $_SESSION['first_name'];?> <?php include 'datalink.php'; echo $_SESSION['last_name'];?></h3>  
 	  <?php	
       if (isset($_GET['msg'])) {
 	  echo "<div class=\"error\">$_GET[msg]</div>";
