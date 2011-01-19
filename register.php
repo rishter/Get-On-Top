@@ -94,7 +94,7 @@ mysql_query($sql_insert) or die("Insertion Failed:" . mysql_error());
 
 <html>
 <head>
-<title>PHP Login :: Free Registration/Signup Form</title>
+<title>PHP Login :: Free Student Registration Form</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <script language="JavaScript" type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
 <script language="JavaScript" type="text/javascript" src="js/jquery.validate.js"></script>
@@ -130,8 +130,8 @@ mysql_query($sql_insert) or die("Insertion Failed:" . mysql_error());
 	 <?php exit();
 	  }
 	?></p>
-      <h3 class="titlehdr">Free Registration / Signup</h3>
-      <p>Please register a free account, before you can start posting your ads. 
+      <h3 class="titlehdr">Free Student Registration</h3>
+      <p>Please register a free account, before you can be matched to a job. 
         Registration is quick and free! Please note that fields marked <span class="required">*</span> 
         are required.</p>
 	 <?php	
