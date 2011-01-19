@@ -38,13 +38,14 @@ $num = mysql_num_rows($result);
 	
 	list($id,$pwd,$first_name,$last_name) = mysql_fetch_row($result);
 	
-	if(!$approved) {
+	/**if(!$approved) {
 	//$msg = urlencode("Account not activated. Please check your email for activation code");
 	$err[] = "Account not activated. Please check your email for activation code";
 	
 	//header("Location: login.php?msg=$msg");
 	 //exit();
-	 }
+	 }**/
+        
 	 
 		//check against salt
 	if ($pwd === PwdHash($pass,substr($pwd,0,9))) { 
@@ -154,7 +155,8 @@ $num = mysql_num_rows($result);
                 <p> 
                   <input name="doLogin" type="submit" id="doLogin3" value="Login">
                 </p>
-                <p><a href="register.php">Register Free</a></p>
+                <p><a href="studentregister.php">Student Registration</a></p>
+                <p><a href="employerregister.php">Employer Registration</a></p>
               </div></td>
           </tr>
         </table>
