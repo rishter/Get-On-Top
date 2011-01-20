@@ -18,14 +18,14 @@ foreach($_POST as $key => $value) {
 
 if(empty($data['first_name']) || strlen($data['first_name']) < 4)
 {
-$err[] = "ERROR - Invalid first name. Please enter atleast 3 or more characters for your first name";
+$err[] = "ERROR - Invalid first name. Please enter at least 3 or more characters for your first name";
 //header("Location: register.php?msg=$err");
 //exit();
 }
 
 if(empty($data['last_name']) || strlen($data['last_name']) < 4)
 {
-$err[] = "ERROR - Invalid last name. Please enter atleast 3 or more characters for your last name";
+$err[] = "ERROR - Invalid last name. Please enter at least 3 or more characters for your last name" . " hello";
 //header("Location: register.php?msg=$err");
 //exit();
 }
