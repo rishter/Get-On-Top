@@ -4,9 +4,6 @@
 </head>
 <body>
 <?php
-echo $_COOKIE["user_id"];
-echo $_COOKIE["user_key"];
-echo $_COOKIE["user_name"];
-echo "Hey"
+echo $_COOKIE["user_id"] . "<br>" . $_COOKIE["user_key"] . "<br>" . $_COOKIE["user_name"] . "<br>" . "Hey";
 ?>
 </body>
