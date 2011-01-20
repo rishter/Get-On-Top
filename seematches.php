@@ -11,7 +11,6 @@ page_protect();
 <?php
 $result = mysql_query("SELECT `Company`,`City`,`State`,`GPA`,`Professional Field` FROM employer_users") or die (mysql_error()); 
 echo "Here are your matches!<br />";
-echo "Your gpa is ".$_SESSION['user_gpa'];
 while($row = mysql_fetch_array($result))
   {
 	if($_SESSION['user_gpa'] >= $row['GPA'] && $_SESSION['user_field'] == $row['Professional Field']){

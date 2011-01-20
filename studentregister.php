@@ -75,10 +75,10 @@ $err[] = "ERROR - The username/email already exists. Please try again with diffe
 if(empty($err)) {
 
 $sql_insert = "INSERT into `users`
-  			(`first_name`, `last_name`, `user_name`, `user_email`,`pwd`,`field`,`city`,`stat`,`gpa`,`date`
+  			(`first_name`, `last_name`, `user_name`, `user_email`,`pwd`,`field`,`city`,`stat`,`gpa`,`env`,`date`
 			)
 		    VALUES
-		    ('$data[first_name]','$data[last_name]','$data[user_name]','$data[usr_email]','$sha1pass','$data[field]','$data[city]','$data[stat]','$data[gpa]',now()
+		    ('$data[first_name]','$data[last_name]','$data[user_name]','$data[usr_email]','$sha1pass','$data[field]','$data[city]','$data[stat]','$data[gpa]','$data[env]',now()
 			)
 			";
 			
@@ -94,7 +94,7 @@ mysql_query($sql_insert) or die("Insertion Failed:" . mysql_error());
 
 <html>
 <head>
-<title>PHP Login :: Free Student Registration Form</title>
+<title>Student Register :: Get On Top!</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <script language="JavaScript" type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
 <script language="JavaScript" type="text/javascript" src="js/jquery.validate.js"></script>
@@ -174,6 +174,16 @@ mysql_query($sql_insert) or die("Insertion Failed:" . mysql_error());
                 <option value="Public and Social Sciences">Public and Social Sciences</option>
                 <option value="Science and Math">Science and Math</option>
                 </select></td>
+	  </tr>
+	      <tr> 
+            <td>Work Environment<span class="required"><font color="#CC0000">*</font></span> 
+            </td>
+		<td><select name="env" class="required" id="env">
+                <option value="" selected></option>
+                <option value="Jeans Okay!">Jeans Okay!</option>
+                <option value="Business Casual">Business Casual</option>
+                <option value="Suits Every Day">Suits Every Day</option>
+            </select></td>
 	  </tr>
           <tr> 
             <td>GPA </td>

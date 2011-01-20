@@ -27,7 +27,7 @@ if (strpos($user_email,'@') === false) {
 }
 
 	
-$result = mysql_query("SELECT `id`,`pwd`,`first_name`,`last_name`,`gpa`,`field`,`city`,`stat` FROM users WHERE 
+$result = mysql_query("SELECT `id`,`pwd`,`first_name`,`last_name`,`gpa`,`field`,`city`,`stat`,`env` FROM users WHERE 
            $user_cond
 			AND `banned` = '0'
 			") or die (mysql_error());
@@ -37,7 +37,7 @@ $num = mysql_num_rows($result);
   // Match row found with more than 1 results  - the user is authenticated. 
     if ( $num > 0 ) { 
 	
-	list($id,$pwd,$first_name,$last_name,$gpa,$field,$city,$state) = mysql_fetch_row($result);
+	list($id,$pwd,$first_name,$last_name,$gpa,$field,$city,$state,$env) = mysql_fetch_row($result);
 		
 	/**if(!$approved) {
 	//$msg = urlencode("Account not activated. Please check your email for activation code");
@@ -64,6 +64,7 @@ $num = mysql_num_rows($result);
 		$_SESSION['user_field'] = $field;
 		$_SESSION['user_city'] = $city;
 		$_SESSION['user_state'] = $state;
+		$_SESSION['user_env'] = $env;
 		$_SESSION['HTTP_USER_AGENT'] = md5($_SERVER['HTTP_USER_AGENT']);
 		
 		//update the timestamp and key for cookie
