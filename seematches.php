@@ -14,8 +14,8 @@ echo "Here are your matches!<br />";
 echo "Your gpa is ".$_SESSION['user_gpa'];
 while($row = mysql_fetch_array($result))
   {
-	if($_SESSION['user_gpa'] >= $row['GPA']){
-		echo $row['Company'] . " in " . $row['City'] . ", " . $row['State'] . " in the field of " . $row['Professional Field'];
+	if($_SESSION['user_gpa'] >= $row['GPA'] && $_SESSION['user_field'] == $row['Professional Field']){
+		echo $row['Company'] . " in " . $row['City'] . ", " . $row['State'];
 		echo "<br />";
 	}
   }
