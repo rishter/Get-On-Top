@@ -32,7 +32,7 @@ $result = mysql_query("SELECT `id`,`pwd`,`first_name`,`last_name`,`gpa`,`field`,
 			AND `banned` = '0'
 			") or die (mysql_error());
 $num = mysql_num_rows($result);
-$f = mysql_query("SELECT `field` FROM fields WHERE fieldid=$field")
+
 
   // Match row found with more than 1 results  - the user is authenticated. 
     if ( $num > 0 ) { 
@@ -46,7 +46,7 @@ $f = mysql_query("SELECT `field` FROM fields WHERE fieldid=$field")
 	//header("Location: login.php?msg=$msg");
 	 //exit();
 	 }**/
-        
+$f = mysql_query("SELECT `field` FROM fields WHERE fieldid=$field")        
 	 
 		//check against salt
 	if ($pwd === PwdHash($pass,substr($pwd,0,9))) { 
