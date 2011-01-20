@@ -37,7 +37,7 @@ if (isset($_SESSION['user_id'])) {?>
       <p>&nbsp;</p>
       <p>&nbsp;</p></td>
     <td width="732" valign="top"><p>&nbsp;</p>
-      <h3 class="titlehdr">Welcome <?php include 'datalink.php'; page_protect(); echo $_SESSION['first_name'];?></h3>  
+      <h3 class="titlehdr">Welcome <?php echo $_SESSION['user_name'];?></h3>  
 	  <?php	
       if (isset($_GET['msg'])) {
 	  echo "<div class=\"error\">$_GET[msg]</div>";
