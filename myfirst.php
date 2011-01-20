@@ -4,9 +4,7 @@
  </head>
  <body>
 <?php
-
-
-
+echo "hey"
 ?>
  </body>
 </html>

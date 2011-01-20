@@ -8,7 +8,5 @@
 //echo $_COOKIE["user_key"];
 //echo $_COOKIE["user_name"];
 echo "Hey"
-
-
->
+?>
 </body>
