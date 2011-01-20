@@ -30,7 +30,19 @@ $err[] = "ERROR - Invalid last name. Please enter atleast 3 or more characters f
 //exit();
 }
 
+if(empty($data['env']))
+{
+$err[] = "ERROR - Please choose a preferred work environment";
+//header("Location: register.php?msg=$err");
+//exit();
+}
+
 // Validate User Name
+if (!isUserID($data['user_name'])) {
+$err[] = "ERROR - Invalid user name. It can contain letters, number and underscore.";
+//header("Location: register.php?msg=$err");
+//exit();
+}
 if (!isUserID($data['user_name'])) {
 $err[] = "ERROR - Invalid user name. It can contain letters, number and underscore.";
 //header("Location: register.php?msg=$err");
@@ -78,8 +90,8 @@ $sql_insert = "INSERT into `users`
   			(`first_name`, `last_name`, `user_name`, `user_email`,`pwd`,`field`,`city`,`stat`,`gpa`,`env`,`date`
 			)
 		    VALUES
-		    ('$data[first_name]','$data[last_name]','$data[user_name]','$data[usr_email]','$sha1pass','$data[env]','$data[city]','$data[stat]','$data[gpa]',
-			'$data[field]',now()
+		    ('$data[first_name]','$data[last_name]','$data[user_name]','$data[usr_email]','$sha1pass','$data[field]','$data[city]','$data[stat]','$data[gpa]',
+			'$data[env]',now()
 			)
 			";
 			
