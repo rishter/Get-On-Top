@@ -38,8 +38,7 @@ $num = mysql_num_rows($result);
     if ( $num > 0 ) { 
 	
 	list($id,$pwd,$first_name,$last_name,$gpa,$field,$city,$state) = mysql_fetch_row($result);
-	$area = mysql_query("SELECT `field` FROM fields WHERE fieldid '2'")        
-	
+		
 	/**if(!$approved) {
 	//$msg = urlencode("Account not activated. Please check your email for activation code");
 	$err[] = "Account not activated. Please check your email for activation code";
@@ -62,7 +61,7 @@ $num = mysql_num_rows($result);
 		$_SESSION['user_firstname'] = $first_name;
         $_SESSION['user_lastname'] = $last_name;
 		$_SESSION['user_gpa'] = $gpa;
-		$_SESSION['user_field'] = $area;
+		$_SESSION['user_field'] = $field;
 		$_SESSION['user_city'] = $city;
 		$_SESSION['user_state'] = $state;
 		$_SESSION['HTTP_USER_AGENT'] = md5($_SERVER['HTTP_USER_AGENT']);

@@ -161,18 +161,18 @@ mysql_query($sql_insert) or die("Insertion Failed:" . mysql_error());
             </td>
 		<td><select name="field" class="required" id="field">
                 <option value="" selected></option>
-                <option value="1">Agriculture and Related Sciences</option>
-                <option value="2">Arts, Visual and Performing</option>
-                <option value="3">Business</option>
-                <option value="4">Communication and Journalism</option>
-                <option value="5">Computer and Information Sciences</option>
-                <option value="6">Education</option>
-                <option value="7">Engineering</option>
-                <option value="8">Health Professions and Clinical Sciences</option>
-                <option value="9">Law and Social Sciences</option>
-                <option value="10">Liberal Arts and Humanities</option>
-                <option value="11">Public and Social Sciences</option>
-                <option value="12">Science and Math</option>
+                <option value="Agriculture and Related Sciences">Agriculture and Related Sciences</option>
+                <option value="Arts, Visual and Performing">Arts, Visual and Performing</option>
+                <option value="Business">Business</option>
+                <option value="Communication and Journalism">Communication and Journalism</option>
+                <option value="Computer and Information Sciences">Computer and Information Sciences</option>
+                <option value="Education">Education</option>
+                <option value="Engineering">Engineering</option>
+                <option value="Health Professions and Clinical Sciences">Health Professions and Clinical Sciences</option>
+                <option value="Law and Social Sciences">Law and Social Sciences</option>
+                <option value="Liberal Arts and Humanities">Liberal Arts and Humanities</option>
+                <option value="Public and Social Sciences">Public and Social Sciences</option>
+                <option value="Science and Math">Science and Math</option>
                 </select></td>
 	  </tr>
           <tr> 
