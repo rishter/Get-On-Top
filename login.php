@@ -61,7 +61,7 @@ $num = mysql_num_rows($result);
 		$_SESSION['user_name'] = $user_name;
 		$_SESSION['user_firstname'] = $first_name;
         $_SESSION['user_lastname'] = $last_name;
-		$_SESSION['user_gpa'] = mysql_query("SELECT gpa FROM users WHERE id='$id'");
+		$_SESSION['user_gpa'] = mysql_query("select gpa where id='$id'");
 		$_SESSION['HTTP_USER_AGENT'] = md5($_SERVER['HTTP_USER_AGENT']);
 		
 		//update the timestamp and key for cookie
