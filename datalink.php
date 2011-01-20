@@ -36,6 +36,9 @@ if (!isset($_SESSION['user_id']) && !isset($_SESSION['user_name']) )
 	
 	$cookie_user_id  = filter($_COOKIE['user_id']);
 	$rs_ctime = mysql_query("select `ckey`,`ctime` from `users` where `id` ='$cookie_user_id'") or die(mysql_error());
+	$first_name = mysql_query("select `first_name` from `users` where `id` = '$cookie_user_id'") or die(mysql_error());
+	$last_name = mysql_query("select `last_name` from `users` where `id` = '$cookie_user_id'") or die(mysql_error());
+	$user_name = mysql_query("select `user_name` from `users` where `id` = '$cookie_user_id'") or die(mysql_error());
 	list($ckey,$ctime) = mysql_fetch_row($rs_ctime);
 	// coookie expiry
 	if( (time() - $ctime) > 60*60*24*COOKIE_TIME_OUT) {
@@ -49,8 +52,8 @@ if (!isset($_SESSION['user_id']) && !isset($_SESSION['user_name']) )
 		  $_SESSION['user_id'] = $_COOKIE['user_id'];
 		  $_SESSION['user_name'] = $_COOKIE['user_name'];
 
-		  $_SESSION['first_name'] = $first_name;
-		  $_SESSION['last_name'] = $last_name;
+		  //$_SESSION['first_name'] = $first_name;
+		  //$_SESSION['last_name'] = $last_name;
 		  
 		  $_SESSION['HTTP_USER_AGENT'] = md5($_SERVER['HTTP_USER_AGENT']);
 		  
@@ -199,7 +202,8 @@ mysql_query("update `users`
 
 unset($_SESSION['user_id']);
 unset($_SESSION['user_name']);
-unset($_SESSION['user_level']);
+unset($_SESSION['first_name']);
+unset($_SESSION['last_name']);
 unset($_SESSION['HTTP_USER_AGENT']);
 session_unset();
 session_destroy(); 
