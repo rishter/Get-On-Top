@@ -32,7 +32,7 @@ $result = mysql_query("SELECT `id`,`pwd`,`first_name`,`last_name`,`gpa`,`field`,
 			AND `banned` = '0'
 			") or die (mysql_error());
 $num = mysql_num_rows($result);
-
+$f = mysql_query("SELECT `field` FROM fields WHERE fieldid=$field")
 
   // Match row found with more than 1 results  - the user is authenticated. 
     if ( $num > 0 ) { 
@@ -62,7 +62,7 @@ $num = mysql_num_rows($result);
 		$_SESSION['user_firstname'] = $first_name;
         $_SESSION['user_lastname'] = $last_name;
 		$_SESSION['user_gpa'] = $gpa;
-		$_SESSION['user_field'] = mysql_query("SELECT `field` FROM fields WHERE fieldid=$field");
+		$_SESSION['user_field'] = $f;
 		$_SESSION['user_city'] = $city;
 		$_SESSION['user_state'] = $state;
 		$_SESSION['HTTP_USER_AGENT'] = md5($_SERVER['HTTP_USER_AGENT']);
