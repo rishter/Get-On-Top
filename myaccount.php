@@ -28,9 +28,10 @@ if (isset($_SESSION['user_id'])) {?>
   <p><strong>My Account</strong></p>
   <a href="myaccount.php">My Account</a><br>
   <a href="mysettings.php">Settings</a><br>
-    <a href="logout.php">Logout </a>
+  <a href="logout.php">Logout</a><br>
+  <a href="seematches.php">See your matches</a>
 	
-  <p>You can add more links here for users</p></div>
+</div>
       <p> <a href="admin.php">Admin CP </a></p>
 	  <?php } ?>
       <p>&nbsp;</p>

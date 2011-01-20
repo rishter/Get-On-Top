@@ -9,7 +9,10 @@ include 'datalink.php';
 <body>
 <?php
 $result = mysql_query("SELECT `Company`,`City`,`State`,`Professional Field` FROM employer_users") or die (mysql_error()); 
-$num = mysql_num_rows($result);
-echo $num;
+while($row = mysql_fetch_array($result))
+  {
+  echo $row['Company'] . " in " . $row['City'] . ", " . $row['State'] . " in the field of " . $row['Professional Field'];
+  echo "<br />";
+  }
 ?>
 </body>
