@@ -22,7 +22,7 @@
 <h3 class="titlehdr">Thank you</h3>
       <h4>Your registration is now complete!</h4>
       <p><font size="2" face="Arial, Helvetica, sans-serif">You can <a href="login.php">login 
-        here</a> know.</font></p>
+        here</a> now.</font></p>
       <p>&nbsp;</p>
 	   
       <p align="right">&nbsp; </p></td>

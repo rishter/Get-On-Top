@@ -78,8 +78,8 @@ $sql_insert = "INSERT into `users`
   			(`first_name`, `last_name`, `user_name`, `user_email`,`pwd`,`field`,`city`,`stat`,`gpa`,`env`,`date`
 			)
 		    VALUES
-		    ('$data[first_name]','$data[last_name]','$data[user_name]','$data[usr_email]','$sha1pass','$data[field]','$data[city]','$data[stat]','$data[gpa]',
-			'$data[env]',now()
+		    ('$data[first_name]','$data[last_name]','$data[user_name]','$data[usr_email]','$sha1pass','$data[env]','$data[city]','$data[stat]','$data[gpa]',
+			'$data[field]',now()
 			)
 			";
 			
