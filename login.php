@@ -38,6 +38,7 @@ $num = mysql_num_rows($result);
     if ( $num > 0 ) { 
 	
 	list($id,$pwd,$first_name,$last_name,$gpa,$field,$city,$state) = mysql_fetch_row($result);
+	$area = mysql_query("SELECT `field` FROM fields WHERE fieldid='$field'")        
 	
 	/**if(!$approved) {
 	//$msg = urlencode("Account not activated. Please check your email for activation code");
@@ -46,7 +47,6 @@ $num = mysql_num_rows($result);
 	//header("Location: login.php?msg=$msg");
 	 //exit();
 	 }**/
-$f = mysql_query("SELECT `field` FROM fields WHERE fieldid=$field")        
 	 
 		//check against salt
 	if ($pwd === PwdHash($pass,substr($pwd,0,9))) { 
@@ -62,7 +62,7 @@ $f = mysql_query("SELECT `field` FROM fields WHERE fieldid=$field")
 		$_SESSION['user_firstname'] = $first_name;
         $_SESSION['user_lastname'] = $last_name;
 		$_SESSION['user_gpa'] = $gpa;
-		$_SESSION['user_field'] = $f;
+		$_SESSION['user_field'] = $area;
 		$_SESSION['user_city'] = $city;
 		$_SESSION['user_state'] = $state;
 		$_SESSION['HTTP_USER_AGENT'] = md5($_SERVER['HTTP_USER_AGENT']);
