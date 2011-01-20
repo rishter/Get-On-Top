@@ -37,14 +37,13 @@ if (isset($_SESSION['user_id'])) {?>
       <p>&nbsp;</p>
       <p>&nbsp;</p></td>
     <td width="732" valign="top"><p>&nbsp;</p>
-      <h3 class="titlehdr">Welcome <?php echo $_SESSION['user_firstname']. " ".$_SESSION['user_lastname'] ; ?></h3>  
+      <h3 class="titlehdr">Welcome <?php echo $_SESSION['user_firstname']. " ".$_SESSION['user_lastname']." from ".$_SESSION['user_city'].", ".$_SESSION['user_state']; ?></h3>  
 	  <?php	
       if (isset($_GET['msg'])) {
 	  echo "<div class=\"error\">$_GET[msg]</div>";
 	  }
-	  echo "Your GPA is ".$_SESSION['user_gpa'];
+	  echo "Your GPA is ".$_SESSION['user_gpa']."<br>You're interested in ".$_SESSION['user_field'];
 	  ?>
-      <p>This is the my account page</p>
 
 	 
       </td>
