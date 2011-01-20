@@ -4,7 +4,9 @@
  </head>
  <body>
 <?php
-echo "Rishi is amazing, again!";
+
+
+
 ?>
  </body>
 </html>
