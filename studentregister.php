@@ -159,8 +159,22 @@ mysql_query($sql_insert) or die("Insertion Failed:" . mysql_error());
           <tr> 
             <td>Field of Interest<span class="required"><font color="#CC0000">*</font></span> 
             </td>
-            <td><input name="field" type="text" id="field" size="30" class="required"></td>
-          </tr>
+		<td><select name="field" class="required" id="field">
+                <option value="" selected></option>
+                <option value="1">Agriculture and Related Sciences</option>
+                <option value="2">Arts, Visual and Performing</option>
+                <option value="3">Business</option>
+                <option value="4">Communication and Journalism</option>
+                <option value="5">Computer and Information Sciences</option>
+                <option value="6">Education</option>
+                <option value="7">Engineering</option>
+                <option value="8">Health Professions and Clinical Sciences</option>
+                <option value="9">Law and Social Sciences</option>
+                <option value="10">Liberal Arts and Humanities</option>
+                <option value="11">Public and Social Sciences</option>
+                <option value="12">Science and Math</option>
+                </select></td>
+	  </tr>
           <tr> 
             <td>GPA </td>
             <td><input name="gpa" type="text" id="gpa">
