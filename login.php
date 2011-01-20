@@ -1,5 +1,6 @@
 <?php 
 include 'datalink.php';
+setcookie("rishi", "Rishikesh Tirumala")
 
 $err = array();
 
