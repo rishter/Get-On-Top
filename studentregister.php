@@ -37,6 +37,13 @@ $err[] = "ERROR - Please choose a preferred work environment";
 //exit();
 }
 
+if(empty($data['field']))
+{
+$err[] = "ERROR - Please choose a preferred field";
+//header("Location: register.php?msg=$err");
+//exit();
+}
+
 // Validate User Name
 if (!isUserID($data['user_name'])) {
 $err[] = "ERROR - Invalid user name. It can contain letters, number and underscore.";
