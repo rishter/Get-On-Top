@@ -1,9 +1,16 @@
+<?php
+include 'datalink.php';
+?>
+
 <html>
 <head>
 	<title>Your matches! Get On Top</title>
 </head>
 <body>
 <?php
-echo $_COOKIE["user_id"] . "<br>" . $_COOKIE["user_key"] . "<br>" . $_COOKIE["user_name"] . "<br>" . "Hey";
+$result = mysql_query("SELECT `Company`,`City`,`State`,`Professional Field`, FROM employer_users
+			") or die (mysql_error()); 
+$num = mysql_num_rows($result);
+echo $num;
 ?>
 </body>
