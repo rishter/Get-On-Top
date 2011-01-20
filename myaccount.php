@@ -42,7 +42,7 @@ if (isset($_SESSION['user_id'])) {?>
       if (isset($_GET['msg'])) {
 	  echo "<div class=\"error\">$_GET[msg]</div>";
 	  }
-	  	  
+	  echo "Your GPA is ".$_SESSION['user_gpa'];
 	  ?>
       <p>This is the my account page</p>
 
