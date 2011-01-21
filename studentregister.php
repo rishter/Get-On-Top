@@ -181,7 +181,7 @@ mysql_query($sql_insert) or die("Insertion Failed:" . mysql_error());
             <td>Field of Interest<span class="required"><font color="#CC0000">*</font></span> 
             </td>
 		<td><select name="field" class="required" id="field">
-                <option value="No option" selected></option>
+                <option value="No option" selected>No Option</option>
                 <option value="Agriculture and Related Sciences">Agriculture and Related Sciences</option>
                 <option value="Arts, Visual and Performing">Arts, Visual and Performing</option>
                 <option value="Business">Business</option>
@@ -200,7 +200,7 @@ mysql_query($sql_insert) or die("Insertion Failed:" . mysql_error());
             <td>Work Environment<span class="required"><font color="#CC0000">*</font></span> 
             </td>
 		<td><select name="environment" class="required" id="environment">
-                <option value="No option" selected></option>
+                <option value="No option" selected>No Option</option>
                 <option value="Jeans Okay">Jeans Okay!</option>
                 <option value="Business Casual">Business Casual</option>
                 <option value="Suits Every Day">Suits Every Day</option>
