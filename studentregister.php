@@ -196,8 +196,16 @@ mysql_query($sql_insert) or die("Insertion Failed:" . mysql_error());
                 <option value="Science and Math">Science and Math</option>
                 </select></td>
 	  </tr>
-	  	<td colspan="2">Environment<span class="required"><font color="#CC0000">*</font></span><br> 
-        <input name="environment" type="text" id="environment" size="20" class="required"></td>
+	  	<tr> 
+		    <td>Work Environment<span class="required"><font color="#CC0000">*</font></span> 
+		    </td>
+		<td><select name="environment" class="required" id="environment">
+		        <option value="No option" selected>No Option</option>
+		        <option value="Jeans Okay">Jeans Okay</option>
+		        <option value="Business Casual">Business Casual</option>
+		        <option value="Suits Every Day">Suits Every Day</option>
+		    </select></td>
+		</tr>
           <tr> 
             <td>GPA </td>
             <td><input name="gpa" type="text" id="gpa">
