@@ -94,7 +94,7 @@ $err[] = "ERROR - The username/email already exists. Please try again with diffe
 
 if(empty($err)) {
 
-$sql_insert = "INSERT into `users`
+$sql_insert = "INSERT INTO `users`
   			(`first_name`, `last_name`, `user_name`, `user_email`,`pwd`,`field`,`city`,`stat`,`gpa`,`environment`,`date`
 			)
 		    VALUES
@@ -201,7 +201,7 @@ mysql_query($sql_insert) or die("Insertion Failed:" . mysql_error());
             </td>
 		<td><select name="environment" class="required" id="environment">
                 <option value="No option" selected>No Option</option>
-                <option value="Jeans Okay">Jeans Okay!</option>
+                <option value="Jeans Okay">Jeans Okay</option>
                 <option value="Business Casual">Business Casual</option>
                 <option value="Suits Every Day">Suits Every Day</option>
             </select></td>
