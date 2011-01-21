@@ -10,8 +10,8 @@ This code filters harmful script code and escapes data of all POST data
 from the user submitted form.
 *****************************************************************/
 foreach($_POST as $key => $value) {
-	//$data[$key] = filter($value);
-	$data[$key] = $value;
+	$data[$key] = filter($value);
+	//$data[$key] = $value;
 }
 
 /************************ SERVER SIDE VALIDATION **************************************/
@@ -201,7 +201,7 @@ mysql_query($sql_insert) or die("Insertion Failed:" . mysql_error());
             </td>
 		<td><select name="environment" class="required" id="environment">
                 <option value="" selected></option>
-                <option value="Jeans Okay!">Jeans Okay!</option>
+                <option value="Jeans Okay">Jeans Okay!</option>
                 <option value="Business Casual">Business Casual</option>
                 <option value="Suits Every Day">Suits Every Day</option>
             </select></td>
