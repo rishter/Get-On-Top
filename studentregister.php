@@ -10,7 +10,8 @@ This code filters harmful script code and escapes data of all POST data
 from the user submitted form.
 *****************************************************************/
 foreach($_POST as $key => $value) {
-	$data[$key] = filter($value);
+	//$data[$key] = filter($value);
+	$data[$key] = $value;
 }
 
 /************************ SERVER SIDE VALIDATION **************************************/
