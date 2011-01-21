@@ -27,7 +27,7 @@ if (strpos($user_email,'@') === false) {
 }
 
 	
-$result = mysql_query("SELECT `id`,`pwd`,`first_name`,`last_name`,`gpa`,`field`,`city`,`stat`,`env` FROM users WHERE 
+$result = mysql_query("SELECT `id`,`pwd`,`first_name`,`last_name`,`gpa`,`field`,`city`,`stat`,`environment` FROM users WHERE 
            $user_cond
 			AND `banned` = '0'
 			") or die (mysql_error());
