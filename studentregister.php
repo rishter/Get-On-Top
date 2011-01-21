@@ -25,19 +25,19 @@ $err[] = "ERROR - Invalid first name. Please enter at least 3 or more characters
 
 if(empty($data['last_name']) || strlen($data['last_name']) < 4)
 {
-$err[] = "ERROR - Invalid last name. Please enter at least 3 or more characters for your last name" . " hello";
+$err[] = "ERROR - Invalid last name. Please enter at least 3 or more characters for your last name";
 //header("Location: register.php?msg=$err");
 //exit();
 }
 
-if(empty($data['env']))
+if($data['environment'] == "")
 {
 $err[] = "ERROR - Please choose a preferred work environment";
 //header("Location: register.php?msg=$err");
 //exit();
 }
 
-if(empty($data['field']))
+if($data['field'] == "")
 {
 $err[] = "ERROR - Please choose a preferred field";
 //header("Location: register.php?msg=$err");
@@ -94,11 +94,11 @@ $err[] = "ERROR - The username/email already exists. Please try again with diffe
 if(empty($err)) {
 
 $sql_insert = "INSERT into `users`
-  			(`first_name`, `last_name`, `user_name`, `user_email`,`pwd`,`field`,`city`,`stat`,`gpa`,`env`,`date`
+  			(`first_name`, `last_name`, `user_name`, `user_email`,`pwd`,`field`,`city`,`stat`,`gpa`,`environment`,`date`
 			)
 		    VALUES
 		    ('$data[first_name]','$data[last_name]','$data[user_name]','$data[usr_email]','$sha1pass','$data[field]','$data[city]','$data[stat]','$data[gpa]',
-			'$data[env]',now()
+			'$data[environment]',now()
 			)
 			";
 			
@@ -198,7 +198,7 @@ mysql_query($sql_insert) or die("Insertion Failed:" . mysql_error());
 	      <tr> 
             <td>Work Environment<span class="required"><font color="#CC0000">*</font></span> 
             </td>
-		<td><select name="env" class="required" id="env">
+		<td><select name="environment" class="required" id="environment">
                 <option value="" selected></option>
                 <option value="Jeans Okay!">Jeans Okay!</option>
                 <option value="Business Casual">Business Casual</option>
