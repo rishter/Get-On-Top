@@ -20,6 +20,7 @@ while($row = mysql_fetch_array($result))
   		echo "<td>" . $_SESSION['City'] . "</td>";
   		echo "<td>" . $_SESSION['State'] . "</td>";
   		echo "</tr>";
+	}
   }
 echo "</table>";
 
