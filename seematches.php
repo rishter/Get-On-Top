@@ -1,4 +1,3 @@
-
 <?php
 include 'datalink.php';
 page_protect();
@@ -17,13 +16,12 @@ while($row = mysql_fetch_array($result))
   {
 	if($_SESSION['user_gpa'] >= $row['GPA'] && $_SESSION['user_field'] == $row['Professional Field']){
 		echo "<tr>";
-  		echo "<td>" . $row['Company'] . "</td>";
-  		echo "<td>" . $row['City'] . "</td>";
-  		echo "<td>" . $row['State'] . "</td>";
+  		echo "<td>" . $_SESSION['Company'] . "</td>";
+  		echo "<td>" . $_SESSION['City'] . "</td>";
+  		echo "<td>" . $_SESSION['State'] . "</td>";
   		echo "</tr>";
   }
 echo "</table>";
-
 ?>
 
 <html>
