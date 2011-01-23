@@ -1,3 +1,7 @@
+<?php
+include 'datalink.php';
+page_protect();
+?>
 <html>
 <head>
 	<title>MATCHES!</title>
