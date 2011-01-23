@@ -29,7 +29,7 @@ if (isset($_SESSION['user_id'])) {?>
   <a href="myaccount.php">My Account</a><br>
   <a href="mysettings.php">Settings</a><br>
   <a href="logout.php">Logout</a><br>
-  <a href="seematches.php">See your matches</a>
+  <a href="seematches.html">See your matches</a>
 	
 </div>
       <p> <a href="admin.php">Admin CP </a></p>
