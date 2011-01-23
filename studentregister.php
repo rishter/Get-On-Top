@@ -166,7 +166,7 @@ mysql_query($sql_insert) or die("Insertion Failed:" . mysql_error());
 	 ?> 
 	 
 	  <br>
-      <form action="register.php" method="post" name="regForm" id="regForm" >
+      <form action="studentregister.php" method="post" name="regForm" id="regForm" >
         <table width="95%" border="0" cellpadding="3" cellspacing="3" class="forms">
           <tr> 
             <td colspan="2">First Name<span class="required"><font color="#CC0000">*</font></span><br> 
