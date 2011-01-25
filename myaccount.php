@@ -41,7 +41,7 @@ h3{
 #table{
  position:relative;
  left: 19px;
- top: 186px;
+ top: 160px;
  width:858px;
  height:auto;
  background-image: url("images/divbg2.png");
@@ -58,6 +58,7 @@ h3{
  font-family: helvetican;
  font-size: 16px;
  position: absolute;
+ top: 20px;
  left:26px;
  width:166px;
  height:300px;
