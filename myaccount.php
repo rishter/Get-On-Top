@@ -92,6 +92,7 @@ h4{
 	  //echo "<div class=\"error\">$_GET[msg]</div>";
 	  //}
 	  echo "Your GPA is ".$_SESSION['user_gpa']."<br>You're interested in ".$_SESSION['user_field'];
+	  "<br>You prefer a'".$_SESSION['user_env']."' work environment."
 	  ?>
 	</div>
         
