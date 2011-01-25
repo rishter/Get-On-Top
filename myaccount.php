@@ -38,6 +38,10 @@ h3{
  font-family: helvetican;
  font-size:25px;
 }
+h4{
+ font-family: helvetican;
+ font-size:20px;
+}
 #table{
  position:relative;
  left: 19px;
@@ -53,12 +57,13 @@ h3{
  left:180px;
  width:675px;
  height:auto;
+ padding-left: 20px;
 }
 #nav{
  font-family: helvetican;
- font-size: 16px;
+ font-size: 18px;
  position: absolute;
- top: 20px;
+ top: 170px;
  left:26px;
  width:166px;
  height:300px;
@@ -100,7 +105,7 @@ Copy this code till END and place it in a new html or php where
 you want to show myaccount options. This is only visible to logged in users
 *******************************************************************/
 if (isset($_SESSION['user_id'])) {?>
-      <p><strong>Links</strong></p>
+      <p><h4>Links</h4></p>
       <a href="myaccount.php">My Account</a><br>
       <a href="logout.php">Logout</a><br>
       <a href="seematches.html">See your matches</a>
