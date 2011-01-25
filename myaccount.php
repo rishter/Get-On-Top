@@ -71,6 +71,13 @@ page_protect();
 }
 
 </style>
+      <?php 
+/*********************** MYACCOUNT MENU ****************************
+This code shows my account menu only to logged in users. 
+Copy this code till END and place it in a new html or php where
+you want to show myaccount options. This is only visible to logged in users
+*******************************************************************/
+if (isset($_SESSION['user_id'])) {?>
 
 <div id="container">
 <img src="images/accountpage.png" id="header">
@@ -88,13 +95,6 @@ page_protect();
         <img src="images/footer2.png" id="footer">
     </div>
     <div id="nav">
-      <?php 
-/*********************** MYACCOUNT MENU ****************************
-This code shows my account menu only to logged in users. 
-Copy this code till END and place it in a new html or php where
-you want to show myaccount options. This is only visible to logged in users
-*******************************************************************/
-if (isset($_SESSION['user_id'])) {?>
       <p><strong>Links</strong></p>
       <a href="myaccount.php">My Account</a><br>
       <a href="logout.php">Logout</a><br>
