@@ -130,7 +130,7 @@ img{
 }
 h3{
  font-family: helvetican;
- font-size:30px;
+ font-size:25px;
 }
 #register{
  position:relative;
@@ -141,11 +141,11 @@ h3{
  overflow:hidden; 
 }
 .msg {
-padding: 5px;
-width: 600px;
-margin: 2px;
+padding: 0px;
+width: 375px;
+margin: 0px;
 color: #c00;
-font: italic 13px  helvetican;
+font: italic 12px  helvetican;
 } 
 
 </style>
