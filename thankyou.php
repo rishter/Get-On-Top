@@ -8,6 +8,67 @@
 </head>
 
 <body>
+
+<style>
+@font-face{
+ font-family: helvetican;
+ src: local("HelveticaNeue-Light"), url("/HelveticaNeue-Light.ttf") format("truetype");
+}
+h3{
+ font-family: helvetican;
+ font-size:25px;
+}
+#header{
+ position: absolute;
+ top: 0px;
+ left:0;
+ right:0;
+ margin-left: auto;
+ margin-right: auto;
+ margin-top:0px;
+}
+#container{
+ position: absolute;
+ top: 0px;
+ left:0;
+ right:0;
+ margin-left: auto;
+ margin-right: auto;
+ margin-top:0px;
+ width:900px;
+}
+#table{
+ position:relative;
+ left: 19px;
+ top: 186px;
+ width:858px;
+ height:auto;
+ background-image: url("images/divbg1.png");
+ background-repeat: repeat;
+}
+#inside{
+ font-family: helvetican;
+ position:relative;
+ height:auto;
+ top:-10px;
+ padding-left:20px;
+ padding-right:20px;
+}
+#footer{
+ position: absolute;
+ left:0;
+ right:0;
+ margin-left: auto;
+ margin-right: auto;
+ margin-top:0px; 
+}
+</style>
+
+<div id="container">
+<img src="images/registerpage.png" id="header">
+    <div id="table">
+        <div id="inside">
+
 <table width="100%" border="0" cellspacing="0" cellpadding="5" class="main">
   <tr> 
     <td colspan="3">&nbsp;</td>
@@ -32,6 +93,12 @@
     <td colspan="3">&nbsp;</td>
   </tr>
 </table>
+
+    </div>
+        <img src="images/footer.png" id="footer">
+    </div>	
+	
+</div>
 
 </body>
 </html>
