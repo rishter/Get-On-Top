@@ -6,7 +6,7 @@ page_protect();
 <head>
 	<title>Get On Top::Matches</title>
 </head>
-<body>
+<body>	
 <?php
 echo "Here are your matches!<br />";
 
@@ -29,5 +29,7 @@ while($row = mysql_fetch_array($result))
 	}
   }
 ?>
+
+
 </body>
 </html>
