@@ -98,7 +98,7 @@ $num = mysql_num_rows($result);
 
 @font-face{
  font-family: HelveticaNeue;
- src: url('HelveticaNeue-Light.ttf');
+ src: url("/HelveticaNeue-Light.ttf") format("truetype");
 }
 img{
  position: absolute;
