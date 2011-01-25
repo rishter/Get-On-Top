@@ -82,7 +82,7 @@ h3{
     <td width="732" valign="top">
 <h3 class="titlehdr">Thank you</h3>
       <h4>Your registration is now complete!</h4>
-      <p><font size="2" face="Arial, Helvetica, sans-serif">You can <a href="login.php">login 
+      <p><font size="2" face="Arial, Helvetica, sans-serif">You can <a href="index.php">login 
         here</a> now.</font></p>
       <p>&nbsp;</p>
 	   

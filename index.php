@@ -133,6 +133,9 @@ h3{
  font-size:25px;
 }
 #register{
+  font-family: helvetican;
+   font-size:25px;
+
  position:relative;
  left: 500px;
  top:200px;
@@ -188,7 +191,7 @@ font: italic 12px  helvetican;
         </table>
     </div>
     <div id="register">
-        lLorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lobortis sodales mi, a imperdiet turpis egestas id. Nulla consequat, magna ut eleifend consectetur, felis nulla tristique lectus, quis suscipit purus magna quis est. Praesent faucibus tellus non leo pulvinar sed suscipit lectus laoreet. Fusce in justo eu lorem gravida vulputate. Vestibulum malesuada molestie est, eu ultrices sem auctor id. In pellentesque, felis id commodo varius, sem massa rhoncus justo, quis feugiat tellus nisi nec lectus. Morbi arcu odio, ultrices non iaculis sed, lacinia nec odio. Quisque ligula purus, commodo vitae semper volutpat, bibendum eu lacus. Proin hendrerit pellentesque nisl, eu vehicula risus dapibus id. Nunc lacinia ligula id ipsum tincidunt mattis lacinia velit lobortis. Phasellus vehicula odio eu nunc facilisis facilisis. Vivamus turpis mi, faucibus quis facilisis sed, facilisis in augue. Morbi tempor lacinia sollicitudin. Aliquam vitae turpis turpis, faucibus ullamcorper massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer sit amet pulvinar tellus. Duis et augue ligula. 
+        REGISTER <a href="studentregister.php">HERE</a>
     </div>
 </div>
     
