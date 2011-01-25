@@ -90,6 +90,10 @@ $num = mysql_num_rows($result);
     $("#logForm").validate();
   });
   </script>
+</head>
+
+<body>
+
 <style>
 
 @font-face{
@@ -124,6 +128,7 @@ img{
  height:200px;
  overflow:hidden;
 }
+h3{
  font-family: HelveticaNeue;
  font-size:30px;
 }
@@ -145,9 +150,6 @@ font: italic 13px  HelveticaNeue;
 
 </style>
 
-
-</head>
-<body>
 
 <div id="container">
 <img src="images/homepage.png">
