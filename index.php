@@ -97,8 +97,8 @@ $num = mysql_num_rows($result);
 <style>
 
 @font-face{
- font-family: HelveticaNeue;
- src: url("/HelveticaNeue-Light.ttf") format("truetype");
+ font-family: helvetican;
+ src: local("HelveticaNeue-Light"), url("/HelveticaNeue-Light.ttf") format("truetype");
 }
 img{
  position: absolute;
@@ -120,7 +120,7 @@ img{
  width:900px;
 }
 #login{
- font-family: HelveticaNeue;
+ font-family: helvetican;
  position:relative;
  left: 500px;
  top:155px;
@@ -129,7 +129,7 @@ img{
  overflow:hidden;
 }
 h3{
- font-family: HelveticaNeue;
+ font-family: helvetican;
  font-size:30px;
 }
 #register{
@@ -145,7 +145,7 @@ padding: 5px;
 width: 600px;
 margin: 2px;
 color: #c00;
-font: italic 13px  HelveticaNeue;
+font: italic 13px  helvetican;
 } 
 
 </style>
