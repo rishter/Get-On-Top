@@ -34,6 +34,10 @@ page_protect();
  margin-top:0px;
  width:900px;
 }
+h3{
+ font-family: helvetican;
+ font-size:25px;
+}
 #table{
  position:relative;
  left: 19px;
@@ -53,7 +57,7 @@ page_protect();
 }
 #nav{
  font-family: helvetican;
- font-size: 25px;
+ font-size: 16px;
  position: absolute;
  left:26px;
  top:170px;
@@ -78,11 +82,11 @@ page_protect();
     <div id="table">
         <div id="main">
 	
-	  <h3 class="titlehdr">Welcome <?php echo $_SESSION['user_firstname']. " ".$_SESSION['user_lastname']." from ".$_SESSION['user_city'].", ".$_SESSION['user_state']; ?></h3>  
+	  <h3>Welcome <?php echo $_SESSION['user_firstname']. " ".$_SESSION['user_lastname']." from ".$_SESSION['user_city'].", ".$_SESSION['user_state']; ?></h3>
 	  <?php	
-      if (isset($_GET['msg'])) {
-	  echo "<div class=\"error\">$_GET[msg]</div>";
-	  }
+      //if (isset($_GET['msg'])) {
+	  //echo "<div class=\"error\">$_GET[msg]</div>";
+	  //}
 	  echo "Your GPA is ".$_SESSION['user_gpa']."<br>You're interested in ".$_SESSION['user_field'];
 	  ?>
 	</div>
