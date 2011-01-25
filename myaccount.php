@@ -50,7 +50,6 @@ h3{
 #main{
  font-family: helvetican;
  position:relative;
- top:-21px;
  left:180px;
  width:675px;
  height:auto;
@@ -60,7 +59,6 @@ h3{
  font-size: 16px;
  position: absolute;
  left:26px;
- top:170px;
  width:166px;
  height:300px;
  overflow:hidden;
